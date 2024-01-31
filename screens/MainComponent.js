@@ -5,6 +5,8 @@ import HomeScreen from './HomeScreen';
 import { createStackNavigator } from "@react-navigation/stack";
 import CampsiteInfoScreen from "./CampsiteInfoScreen";
 import DirectoryScreen from "../screens/DirectoryScreen";
+import AboutScreen from "./AboutScreen";
+import ContactScreen from "./ContactScreen";
 
 
 const Drawer = createDrawerNavigator();
@@ -84,9 +86,19 @@ const Main = () => {
             component={DirectoryNavigator}
             options={{ title: 'Directory' }}
             />
+            <Drawer.Screen
+            name='About'
+            component={AboutNavigator}
+            options={{ title: 'About Us' }}
+            />
+            <Drawer.Screen
+            name='Contact'
+            component={ContactNavigator}
+            options={{ title: 'Contact Us' }}
+            />
         </Drawer.Navigator>
         </View>
     );
 };
 
-export default Main
+export default Main;
