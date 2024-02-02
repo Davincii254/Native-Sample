@@ -3,15 +3,15 @@ import {CAMPSITES} from '../shared/campste';
 import { FlatList } from "react-native";
 import { Avatar, ListItem } from "react-native-elements";
 
-const DirectoryScreen = ({navigation}) => {
-    const [campsite, setCampsites] = useState(CAMPSITES)
+const DirectoryScreen = ({ navigation }) => {
+    const [campsites, setCampsites] = useState(CAMPSITES);
 
-    const renderDirectoryItem = ({ item: campsite}) => {
+    const renderDirectoryItem = ({ item: campsite }) => {
         return (
-            <ListItem 
-            onPress={() => 
-            navigation.navigate('CampsiteInfo', {campsite})
-            }
+            <ListItem
+                onPress={() =>
+                    navigation.navigate('CampsiteInfo', { campsite })
+                }
             >
                 <Avatar source={campsite.image} rounded />
                 <ListItem.Content>
@@ -25,9 +25,9 @@ const DirectoryScreen = ({navigation}) => {
     };
     return (
         <FlatList
-        data={campsite}
-        renderItem = {renderDirectoryItem}
-        keyExtractor={(item) => item.id.toString()} 
+            data={campsites}
+            renderItem={renderDirectoryItem}
+            keyExtractor={(item) => item.id.toString()}
         />
     );
 };
