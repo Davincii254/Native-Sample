@@ -1,4 +1,5 @@
-import { Platform, View } from "react-native";
+import { Platform, StyleSheet, View } from "react-native";
+import { Icon } from "react-native-elements";
 import Constants from 'expo-constants';
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import HomeScreen from './HomeScreen';

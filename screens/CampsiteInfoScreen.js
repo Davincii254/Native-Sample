@@ -1,4 +1,3 @@
-import RenderCampsite from "../features/campsites/RenderCampsite";
 import { FlatList, StyleSheet, TextInput, View } from "react-native-gesture-handler";
 import RenderCampsite from "../features/campsites/RenderCampsite";
 import COMMENTS from "../shared/comments";
