@@ -1,6 +1,8 @@
 import { FlatList, StyleSheet, TextInput, View } from "react-native-gesture-handler";
 import RenderCampsite from "../features/campsites/RenderCampsite";
 import COMMENTS from "../shared/comments";
+import { Card, Text } from 'react-native-elements';
+
 
 
 const CampsiteInfoScreen = ({ route }) => {
@@ -46,21 +48,21 @@ const CampsiteInfoScreen = ({ route }) => {
         />
     )
 };
-const styles = StyleSheet.create({
-    commentsTitle: {
-        textAlign: 'center',
-        backgroundColor: '#fff',
-        fontSize: 16,
-        fontWeight: 'bold',
-        color: '#43484D',
-        padding: 10,
-        paddingTop: 30
-    },
-    commentItem: {
-        paddingVertical: 10,
-        paddingHorizontal: 20,
-        backgroundColor: '#fff'
-    }
-});
+// const styles = StyleSheet.create({
+//     commentsTitle: {
+//         textAlign: 'center',
+//         backgroundColor: '#fff',
+//         fontSize: 16,
+//         fontWeight: 'bold',
+//         color: '#43484D',
+//         padding: 10,
+//         paddingTop: 30
+//     },
+//     commentItem: {
+//         paddingVertical: 10,
+//         paddingHorizontal: 20,
+//         backgroundColor: '#fff'
+//     }
+// });
 
 export default CampsiteInfoScreen;

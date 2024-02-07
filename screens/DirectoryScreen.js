@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {CAMPSITES} from '../shared/campste';
+import {CAMPSITES} from '../shared/campsite';
 import { FlatList } from "react-native";
 import { Avatar, ListItem } from "react-native-elements";
 

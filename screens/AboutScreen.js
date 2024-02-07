@@ -2,6 +2,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { ScrollView } from "react-native-gesture-handler";
 import PARTNERS from "../shared/partners";
 import { useState } from "react";
+import { Card, Text } from 'react-native-elements';
 import { Avatar, ListItem } from "react-native-elements";
 
 function Mission() {
