@@ -1,15 +1,11 @@
-import { Text, View } from "react-native";
-import { useState } from "react";
-import { ScrollView } from "react-native";
-import { Card } from "react-native-elements";
-import CAMPSITES from "../shared/campsite";
-import PROMOTIONS from "../shared/promotions";
-import PARTNERS from "../shared/partners";
+import { useState } from 'react';
+import { ScrollView, Text, View } from 'react-native';
+import { Card } from 'react-native-elements';
+import { CAMPSITES } from '../shared/campsite';
+import { PROMOTIONS } from '../shared/promotions';
+import { PARTNERS } from '../shared/partners';
 
-console.log("CAMPSITES:", CAMPSITES);
-console.log("PROMOTIONS:", PROMOTIONS);
-console.log("PARTNERS:", PARTNERS);
-
+console.log(CAMPSITES, )
 
 const FeaturedItem = ({ item }) => {
     if (item) {
@@ -37,13 +33,8 @@ const FeaturedItem = ({ item }) => {
 
 const HomeScreen = () => {
     const [campsites, setCampsites] = useState(CAMPSITES);
-    console.log("campsites:", campsites); // Log the campsites state
     const [promotions, setPromotions] = useState(PROMOTIONS);
-    console.log("promotions:", promotions); // Log the promotions state
     const [partners, setPartners] = useState(PARTNERS);
-    console.log("partners:", partners); // Log the partners state
-
-
 
     const featCampsite = campsites.find((item) => item.featured);
     const featPromotion = promotions.find((item) => item.featured);
@@ -51,11 +42,11 @@ const HomeScreen = () => {
 
     return (
         <ScrollView>
-        {featCampsite && <FeaturedItem item={featCampsite} />}
-        {featPromotion && <FeaturedItem item={featPromotion} />}
-        {featPartner && <FeaturedItem item={featPartner} />}
+            <FeaturedItem item={featCampsite} />
+            <FeaturedItem item={featPromotion} />
+            <FeaturedItem item={featPartner} />
         </ScrollView>
     );
 };
 
-export default HomeScreen
+export default HomeScreen;
